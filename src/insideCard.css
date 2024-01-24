@@ -1,5 +1,5 @@
 .insideCard {
-    /* border: yellow solid 3px; */
+    border: yellow solid 3px;
     position: relative; /* Make the container relative */
     background-color: #383333;
     height: 600px;
@@ -7,11 +7,11 @@
     text-align: center;
     margin: auto;
     overflow: hidden; /* Hide overflow content */
+
 }
 
 .background-image{
-    height: 600px;
-    width: 500px;
+    width:100%;
 }
 
 .info {
@@ -21,7 +21,7 @@
     top: 0;
     left: 50%; /* Center horizontally */
     transform: translateX(-50%);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     width: 500px;
     overflow: hidden; /* Hide overflow content */
     color: #ffffff;
@@ -46,4 +46,8 @@
     color: #ffffff;
     text-shadow: 2px 2px 4px black ;
     
+}
+.j{
+
+    color: #ffffff;
 }
