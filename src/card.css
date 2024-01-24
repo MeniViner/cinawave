@@ -31,12 +31,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Take the full height of the parent container */
+    height: 100%; 
 }
 
 .movie-img {
     width: 106%;
-    
 }
 
 .movie-description {    
