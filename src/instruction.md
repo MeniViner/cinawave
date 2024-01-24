@@ -13,3 +13,5 @@ git push origin master
 git fetch origin
 git diff --name-only master origin/master
 
+# 5.Friend pull code
+git pull origin master
