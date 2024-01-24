@@ -17,13 +17,13 @@
 .info {
     /* border: #c71e1e solid 1px; */
     position: absolute;
-    bottom: 0; /* Stick to the bottom of the container */
+    bottom: 0; 
     top: 0;
-    left: 50%; /* Center horizontally */
+    left: 50%;
     transform: translateX(-50%);
     /* backdrop-filter: blur(10px); */
     width: 500px;
-    overflow: hidden; /* Hide overflow content */
+    overflow: hidden;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgb(0, 0, 0) ;
 }
@@ -31,7 +31,6 @@
 .like-img {
     width: 30px;
     height: 30px;
-    
 }
   
 .likes {
@@ -45,9 +44,8 @@
     font-size: large;
     color: #ffffff;
     text-shadow: 2px 2px 4px black ;
-    
 }
-.j{
 
+.j{
     color: #ffffff;
 }
