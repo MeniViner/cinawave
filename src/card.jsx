@@ -1,5 +1,4 @@
 import React from "react";
-// import Button from "./Button/Button";
 
 function Card({ movie }) {
     return (
