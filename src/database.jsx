@@ -17,7 +17,7 @@ const fetchTrendingMovies = async (page) => {
 const getAllTrendingMovies = async () => {
     let allMovies = [];
 
-    for (let page = 1; page <= 10; page++) {
+    for (let page = 1; page <= 15; page++) {
         const movies = await fetchTrendingMovies(page);
         allMovies = [...allMovies, ...movies];
     }
