@@ -11,8 +11,6 @@ import './insideCard.css';
 
 function App() {
 
-
-
   const [filteredMovies, setFilteredMovies] = useState([]);
 
   useEffect(() => {
