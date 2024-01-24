@@ -1,0 +1,76 @@
+.cards {
+    /* border: rgb(251, 246, 0) solid 1px; */
+    height: 335px;
+    width: 225px;
+    background-color: #c71e1e;
+    margin-top: 30px;
+    flex: 0 0 225px; /* Fill available space evenly */
+    border-radius: 9px;
+    position: relative;
+    overflow: hidden; /* Hide overflow content */
+    
+}
+ 
+.cards:hover .movie-description{
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2%;
+    background-color: rgba(244, 239, 246, 0.066);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    transform: scale(0.92);
+}
+  
+.cards:hover img {
+    transform: scale(1.1);
+    transform-origin: center; /* Set the transform origin to the center */
+    transition: transform 0.4s ease;
+}
+
+.img-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Take the full height of the parent container */
+}
+
+.movie-img {
+    width: 100%;
+    
+}
+
+.movie-description {    
+    /* border: #c71e1e solid 1px;   */
+    position: absolute;
+    bottom:1% ;
+    left: 1%;
+    width: 100%;
+    height: 20%;
+    transition: transform 0.4s;
+}
+
+#main-info-movie{
+    display: flex;
+    flex-direction: row;
+    gap: 3px;   
+}
+
+.cube-info {
+    color: aqua;
+    background-color: rgba(0, 255, 255, 0.082);
+    backdrop-filter: blur(15px); 
+    border-radius: 8px;
+    width: 20%;
+}
+
+.cube-text {
+    color: rgb(157, 206, 238);
+    font: 0.8em sans-serif;
+}
+
+.movie-name {
+    color: white;
+    text-align: left;
+    font: 1em sans-serif;
+    margin-left: 4%;
+}

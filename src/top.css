@@ -1,0 +1,30 @@
+.main{
+    border: chartreuse solid 5px;
+}
+
+.main2{
+    border: rgb(99, 9, 255) solid 5px;
+}
+
+.titel{
+    border: rgb(255, 0, 0) solid 5px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.h{
+    color: #ffffff;
+}
+
+.main-main{
+    border: rgb(10, 134, 62) solid 5px;
+}
+
+.search-bar{
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.314);
+    border-radius: 8px;
+    font-size:medium;
+    color: white;
+}
