@@ -1,17 +1,64 @@
-.main{
+.main {
     border: chartreuse solid 5px;
 }
 
-.main2{
+.main2 {
     border: rgb(99, 9, 255) solid 5px;
 }
 
-.titel{
+.titel {
+    margin: 2%;
+    border-radius: 8px;
     border: rgb(255, 0, 0) solid 5px;
     color: #ffffff;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
+
+.search-box {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(152, 152, 152, 0.466);
+    border-radius: 8px;
+    height: auto;
+    align-items: center;
+}
+
+
+.search-box :focus {
+    border: none;
+    background: white;
+}
+
+.search-box:hover {
+    border: none;
+    background: white;
+}
+
+
+.search-bar{
+    width: 150px;
+    border-radius: px;
+    font-size:medium;
+    color: white;
+    background-color: rgba(254, 254, 255, 0);
+    border: none;
+    outline: none;
+
+}
+
+.burger-menu {
+
+    border: white solid 3px;
+
+}
+
+
 
 .h{
     color: #ffffff;
@@ -21,10 +68,10 @@
     border: rgb(10, 134, 62) solid 5px;
 }
 
-.search-bar{
-    width: 500px;
-    background-color: rgba(0, 0, 0, 0.314);
-    border-radius: 8px;
-    font-size:medium;
-    color: white;
+
+
+
+
+.right-align {
+    margin-left: auto;
 }

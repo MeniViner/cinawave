@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import Button from "./Button/Button";
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faMagnifyingGlass, faSearch, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+library.add(faMagnifyingGlass, faSearch, faBarsStaggered);
+
+
 function Top({ onSearch }) {
 
     const [searchQuery, setSearchQuery] = useState("");
@@ -10,16 +17,29 @@ function Top({ onSearch }) {
         <div className="main-main">
             <div className="up">
                 <div class="titel">
-                    <h1>Reel-Feel</h1> 
+                     
+                    <img src="./images/logo.png" alt="logo" width={"20%"}/>
+                    
                     <div className="search-box">
+
+                        <FontAwesomeIcon icon={faSearch} size="lg "/>
                         <input
-                            className="search-bar"
-                            type="text"
-                            placeholder="Search for movies..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                        />
-                        <button onClick={handleSearch}>Search</button>
+                        className="search-bar"
+                        type="text"                
+                        placeholder="Search..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        style={{ border: 'none' }}
+                        
+                    /> 
+
+                    <button onClick={handleSearch}>Search</button>
+
+                    <div className="burger-menu right-align" >
+                        <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>
+                         
+                    </div>
+                    
                     </div>
                 </div>
             </div>
