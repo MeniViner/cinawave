@@ -1,7 +1,6 @@
 .titel {
   margin: 2%;
   border-radius: 8px;
-  border: rgb(255, 0, 0) solid 5px;
   color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -11,6 +10,8 @@
   align-items: center;
   height: 50px;
   margin-top: 1px;
+  background-color: rgba(0, 0, 0, 0.591);
+  height: 70px;
 }
 
 .search-box {
