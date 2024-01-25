@@ -16,6 +16,11 @@ function Top({ onSearch }) {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     };
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            handleSearch();
+        }
+    };
      
     return (
        <div className="main-main" style={backgroundImageStyle}>
@@ -33,8 +38,9 @@ function Top({ onSearch }) {
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             style={{ border: 'none' }}  
+                            onKeyDown={handleKeyDown} // Call handleKeyDown on key press
                         /> 
-                        <button onClick={handleSearch}>Search</button>
+                        {/* <button onClick={handleSearch}>Search</button> */}
                     </div>
                         <div className="burger-menu right-align" >
                             <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>        
