@@ -35,6 +35,7 @@ function Top({ onSearch }) {
                             className="search-bar"
                             type="text"                
                             placeholder="Search..."
+                            
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             style={{ border: 'none' }}  
