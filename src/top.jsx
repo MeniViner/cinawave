@@ -9,9 +9,8 @@ library.add(faMagnifyingGlass, faSearch, faBarsStaggered);
 
 
 function Top({ onSearch }) {
-
-  const [searchQuery, setSearchQuery] = useState("");
-    const handleSearch = () => { onSearch(searchQuery); };
+    const [searchQuery, setSearchQuery] = useState("");
+    const handleSearch = () => {onSearch(searchQuery);};
     const backgroundImageStyle = {
       backgroundImage: `url("./images/300.jpeg")`, // Update the path to your image
       backgroundSize: 'cover',
@@ -36,10 +35,10 @@ function Top({ onSearch }) {
                             style={{ border: 'none' }}  
                         /> 
                         <button onClick={handleSearch}>Search</button>
+                    </div>
                         <div className="burger-menu right-align" >
                             <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>        
                         </div>
-                    </div>
                 </div>
                 <div className="content">
                     <div className="main">

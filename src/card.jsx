@@ -18,7 +18,7 @@ function Card({ movie }) {
                         <h1 className="cube-text">{movie.vote_count}</h1>
                     </div>
                 </div>
-                <h1 className="movie-name">{movie.original_title}</h1>
+                <h1 className="movie-name">{movie.title}</h1>
             </div>
         </div>
     );

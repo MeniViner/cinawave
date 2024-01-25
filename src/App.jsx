@@ -35,7 +35,7 @@ function App() {
     } else {
       // Use the searchQuery to filter movies
       const filtered = originalMovies.filter(movie =>
-        movie.original_title && movie.original_title.toLowerCase().includes(searchQuery.toLowerCase())
+        movie.title && movie.title.toLowerCase().includes(searchQuery.toLowerCase())
       );
 
       // Update the filteredMovies state
