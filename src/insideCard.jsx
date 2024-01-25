@@ -7,7 +7,7 @@ function InsideCard({ filteredMovies }) {
   const [like, setLike] = useState(0);
   const [disLike, setDislike] = useState(0);
   const { insideCard } = useParams();
-  const selectedMovie = filteredMovies.find(movie => movie.title === decodeURIComponent(insideCard));
+  const selectedMovie = filteredMovies.find(movie => movie.original_title === decodeURIComponent(insideCard));
 
   if (!selectedMovie) {
     return <div>Movie not found</div>;

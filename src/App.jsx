@@ -23,25 +23,24 @@ function App() {
     fetchMovies();
   }, []);
 
-  const handleSearch = (searchQuery) => {
-    if (!originalMovies || !Array.isArray(originalMovies)) {
-      // Handle the case where originalMovies is not defined or not an array
-      return;
-    }
+const handleSearch = (searchQuery) => {
+  console.log("Search query:", searchQuery);
+  
+  if (!originalMovies || !Array.isArray(originalMovies)) {
+    return;
+  }
 
-    if (searchQuery.trim() === "") {
-      // If searchQuery is empty, reset to the original list
-      setFilteredMovies(originalMovies);
-    } else {
-      // Use the searchQuery to filter movies
-      const filtered = originalMovies.filter(movie =>
-        movie.title && movie.title.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+  if (searchQuery.trim() === "") {
+    setFilteredMovies(originalMovies);
+  } else {
+    const filtered = originalMovies.filter(movie =>
+      movie.original_title && movie.original_title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    console.log("Filtered movies:", filtered);
+    setFilteredMovies(filtered);
+  }
+};
 
-      // Update the filteredMovies state
-      setFilteredMovies(filtered);
-    }
-  };
 
   return (
     <Router>
@@ -60,12 +59,13 @@ function Home({ filteredMovies }) {
   return (
     <div className="main-cards">
       {filteredMovies.map((movie) => (
-        <Link key={movie.id} to={`/card/${encodeURIComponent(movie.title)}`}>
+        <Link key={movie.id} to={`/card/${encodeURIComponent(movie.original_title)}`}>
           <Card movie={movie} />
         </Link>
       ))}
     </div>
   );
 }
+
 
 export default App;
