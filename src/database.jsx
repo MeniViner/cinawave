@@ -25,7 +25,6 @@ const getAllTrendingMovies = async () => {
     return allMovies;
 };
 
-// Example usage
 getAllTrendingMovies().then((movies) => {
     console.log('All trending movies:', movies);
 });

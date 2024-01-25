@@ -8,7 +8,6 @@
     border-radius: 9px;
     position: relative;
     overflow: hidden; /* Hide overflow content */
-    
 }
  
 .cards:hover .movie-description{
@@ -39,7 +38,7 @@
 }
 
 .movie-description {    
-    /* border: #c71e1e solid 1px;   */
+    /* border: #c71e1e solid 1px;  */
     position: absolute;
     bottom:1% ;
     left: 1%;
