@@ -28,22 +28,20 @@ function App() {
       // Handle the case where originalMovies is not defined or not an array
       return;
     }
-  
+
     if (searchQuery.trim() === "") {
       // If searchQuery is empty, reset to the original list
       setFilteredMovies(originalMovies);
     } else {
-      // Use the searchQuery to filter movies with exact word match
+      // Use the searchQuery to filter movies
       const filtered = originalMovies.filter(movie =>
-        movie.original_title && movie.original_title.toLowerCase() === searchQuery.toLowerCase()
+        movie.original_title && movie.original_title.toLowerCase().includes(searchQuery.toLowerCase())
       );
-      
-  
+
       // Update the filteredMovies state
       setFilteredMovies(filtered);
     }
   };
-  
 
   return (
     <Router>
