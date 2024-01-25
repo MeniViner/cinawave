@@ -12,7 +12,6 @@ function Top({ onSearch }) {
 
     const [searchQuery, setSearchQuery] = useState("");
     const handleSearch = () => { onSearch(searchQuery); };
-  
     const backgroundImageStyle = {
       backgroundImage: `url("./images/300.jpeg")`, // Update the path to your image
       backgroundSize: 'cover',
@@ -74,6 +73,8 @@ function Top({ onSearch }) {
                     </h1>
                 </div>
            </div>
+      </div>
+      </div>
       </div>
     </div>
   );
