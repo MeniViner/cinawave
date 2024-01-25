@@ -16,10 +16,21 @@ const fetchTrendingMovies = async (page) => {
 
 const getAllTrendingMovies = async () => {
     let allMovies = [];
+    let movieIdsSet = new Set();
 
-    for (let page = 1; page <= 15; page++) {
+    for (let page = 1; page <= 25; page++) {
         const movies = await fetchTrendingMovies(page);
-        allMovies = [...allMovies, ...movies];
+
+        // Filter movies that have original_title and not already added
+        const filteredMovies = movies.filter(movie => {
+            return movie.original_title && !movieIdsSet.has(movie.id);
+        });
+
+        filteredMovies.forEach(movie => {
+            movieIdsSet.add(movie.id);
+        });
+
+        allMovies = [...allMovies, ...filteredMovies];
     }
 
     return allMovies;
@@ -27,8 +38,7 @@ const getAllTrendingMovies = async () => {
 
 // Example usage
 getAllTrendingMovies().then((movies) => {
-    console.log('All trending movies:', movies);
+    console.log('All trending movies with original_title, appearing only once:', movies);
 });
-
 
 export default getAllTrendingMovies;

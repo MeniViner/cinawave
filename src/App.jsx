@@ -59,7 +59,7 @@ function Home({ filteredMovies }) {
   return (
     <div className="main-cards">
       {filteredMovies.map((movie) => (
-        <Link key={movie.id} to={`/card/${encodeURIComponent(movie.original_title)}`}>
+        <Link key={movie.originalMovies} to={`/card/${encodeURIComponent(movie.original_title)}`}>
           <Card movie={movie} />
         </Link>
       ))}
