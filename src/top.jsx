@@ -19,14 +19,12 @@ function Top({ onSearch }) {
     };
      
     return (
-        <div className="main-main">
+      <div className="main-main" style={backgroundImageStyle}>
+      <div className="overlay"></div>
             <div className="up">
-                <div class="titel">
-                     
+                <div class="titel"> 
                     <img src="./images/logo.png" alt="logo" width={"20%"}/>
-                    
                     <div className="search-box">
-
                         <FontAwesomeIcon icon={faSearch} size="lg "/>
                         <input
                         className="search-bar"
@@ -34,21 +32,15 @@ function Top({ onSearch }) {
                         placeholder="Search..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        style={{ border: 'none' }}
-                        
+                        style={{ border: 'none' }}  
                     /> 
-
                     <button onClick={handleSearch}>Search</button>
-
                     <div className="burger-menu right-align" >
-                        <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>
-                         
+                        <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>        
                     </div>
-                    
                     </div>
                 </div>
-    <div className="main-main" style={backgroundImageStyle}>
-      <div className="overlay"></div>
+
         <div className="content">
             <div className="title"></div>
             <div className="search-box">
@@ -76,7 +68,6 @@ function Top({ onSearch }) {
       </div>
       </div>
       </div>
-    </div>
   );
 }
 
