@@ -50,7 +50,7 @@ function Top({ onSearch }) {
                     <div className="main">
                         <h1 className="h">Free Movies to Watch,</h1>
                         <h1 className="h">Anytime Anywhere.</h1>
-                        <h3 className="g">The search is over! Let Plex help you find the perfect </h3>
+                        <h3 className="g">The search is over! Let CinaWawe help you find the perfect </h3>
                         <h3 className="g">movie to watch tonight for free.</h3>
                         <br></br>
                         <div className="button">
