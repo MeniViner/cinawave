@@ -1,5 +1,5 @@
 .insideCard {
-    border: yellow solid 3px;
+    /* border: yellow solid 3px; */
     position: relative; /* Make the container relative */
     background-color: #383333;
     height: 600px;
