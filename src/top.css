@@ -13,6 +13,7 @@
     color: #ffffff;
     display: flex;
     flex-direction: column;
+    
 }
 
 .h {
@@ -21,7 +22,7 @@
     font-size: 4em;
     font-weight: bold;
     line-height: 0.8; /* Adjust as needed */
-    
+
 }
 
 .g {
