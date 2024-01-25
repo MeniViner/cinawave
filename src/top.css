@@ -17,20 +17,25 @@
 .search-box {
   display: flex;
   flex-direction: row;
-  background-color: rgba(152, 152, 152, 0.466);
+  background-color: rgba(101, 92, 92, 0.466);
   border-radius: 8px;
   height: auto;
   align-items: center;
-  z-index: 2; /* Ensure content is on top of the background image */
+  z-index: 2;
+  height: 35px;
+  border-radius: 20px;
 
 }
 
+.logo{
+  z-index: 2;
+}
 
-.search-box :focus {
+/* .search-box :focus {
   border: none;
   background: white;
   color: #000;
-}
+} */
 
 .search-box:hover {
   border: none;
@@ -38,22 +43,25 @@
   color: #000;
 }
 
+.search-box:hover .search-bar{
 
-.search-bar{
-  width: 150px;
-  border-radius: px;
-  font-size:medium;
-  color: white;
-  background-color: rgba(254, 254, 255, 0);
-  border: none;
-  outline: none;
+  background-color:white;
 
 }
+
+.search-bar{
+  width: 500px;
+  background-color: rgba(49, 47, 47, 0.466);
+  border-radius: 8px;
+  font-size:medium;
+  color: white;
+  outline: none;
+  z-index: 2;
+  }
 
 .burger-menu {
   color: azure;
   z-index: 2;
-
 }
 
 
@@ -87,18 +95,7 @@ height: 70vh; /* Adjust as needed */
   }
 
 .right-align {
-  margin-left: 50%;
-}
-.search-bar{
-width: 500px;
-background-color: rgba(0, 0, 0, 0.475);
-border-radius: 8px;
-font-size:medium;
-color: white;
-}
-
-.search-box{
-height: 1px;
+  margin-left: auto;
 }
 
 .overlay {

@@ -23,7 +23,7 @@ function Top({ onSearch }) {
                 <div className="up">
                     <br></br>
                     <div class="titel"> 
-                        <img src="./images/logo.png" alt="logo" width={"20%"}/>
+                        <img className="logo" src="./images/logo.png" alt="logo" width={"20%"}/>
                         <div className="search-box">
                             <FontAwesomeIcon icon={faSearch} size="lg "/>
                             <input
