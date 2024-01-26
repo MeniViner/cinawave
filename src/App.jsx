@@ -49,19 +49,19 @@ const handleSearch = (searchQuery) => {
         <Routes>
           <Route path="/" element={<Home filteredMovies={filteredMovies} />} />
           <Route path="/card/:insideCard" element={<InsideCard filteredMovies={filteredMovies} />} />
-          <Route path="/page1" element={<Page1 />} />
-          <Route path="/page2" element={<Page2 />} />
+          <Route path="/my-list" element={<MyList />} />
+          <Route path="/series" element={<Series />} />
         </Routes>
       </div>
     </Router>
   );
 }
 
-function Page1() {
+function MyList() {
   return <h2>This is Page 1</h2>;
 }
 
-function Page2() {
+function Series() {
   return <h2>This is Page 2</h2>;
 }
 

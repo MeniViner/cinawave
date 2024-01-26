@@ -42,8 +42,8 @@ function Top({ onSearch }) {
                         /> 
                     </div>
                     <div className="additional-links">
-                        <Link to="/page1">my list</Link>
-                        <Link to="/page2">series</Link>
+                        <Link to="/my-list">my list</Link>
+                        <Link to="/series">series</Link>
                         <Link to="/">Home</Link>
                     </div>
                     <div className="burger-menu right-align" >
