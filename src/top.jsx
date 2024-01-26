@@ -1,9 +1,10 @@
-import React, { useState } from "react";
 import Button from "./Button/Button";
-
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMagnifyingGlass, faSearch, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+
 
 library.add(faMagnifyingGlass, faSearch, faBarsStaggered);
 
@@ -40,6 +41,11 @@ function Top({ onSearch }) {
                             onKeyDown={handleKeyDown} // Call handleKeyDown on key press
                         /> 
                     </div>
+                    <div className="additional-links">
+                        <Link to="/page1">my list</Link>
+                        <Link to="/page2">series</Link>
+                        <Link to="/">Home</Link>
+                    </div>
                     <div className="burger-menu right-align" >
                         <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>        
                     </div>
@@ -62,5 +68,6 @@ function Top({ onSearch }) {
         </div>
     );
 }
+
 
 export default Top;

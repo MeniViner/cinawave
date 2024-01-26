@@ -107,5 +107,31 @@ height: 100%;
 z-index: 1;
 }
 
+.additional-links {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+
+.additional-links a {
+  font-size: 150%;
+  color: #e5d9d9;
+  text-decoration: none;
+  margin-right: 40%;
+  white-space: nowrap;
+  transition: transform 0.3s; /* Add transition for smoother animation */
+}
+
+.additional-links a:hover {
+  transform: scale(1.2); /* Enlarge the hovered link */
+  color: white;
+}
+
+
+
+
+
+
 
 

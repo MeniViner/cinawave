@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import getAllTrendingMovies from "./database";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Top from './top';
-import Card from "./card";
-import InsideCard from "./insideCard";
+import Card from './card';
+import InsideCard from './insideCard';
+import getAllTrendingMovies from './database';
 import './App.css';
 import './top.css';
 import './card.css';
@@ -45,14 +45,24 @@ const handleSearch = (searchQuery) => {
   return (
     <Router>
       <div className="Main">
-        <div><Top onSearch={handleSearch} /></div>
+        <Top onSearch={handleSearch} />
         <Routes>
           <Route path="/" element={<Home filteredMovies={filteredMovies} />} />
           <Route path="/card/:insideCard" element={<InsideCard filteredMovies={filteredMovies} />} />
+          <Route path="/page1" element={<Page1 />} />
+          <Route path="/page2" element={<Page2 />} />
         </Routes>
       </div>
     </Router>
   );
+}
+
+function Page1() {
+  return <h2>This is Page 1</h2>;
+}
+
+function Page2() {
+  return <h2>This is Page 2</h2>;
 }
 
 function Home({ filteredMovies }) {
@@ -66,6 +76,5 @@ function Home({ filteredMovies }) {
     </div>
   );
 }
-
 
 export default App;
