@@ -3,7 +3,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMagnifyingGlass, faSearch, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom'; 
 
 
 library.add(faMagnifyingGlass, faSearch, faBarsStaggered);
@@ -12,7 +12,7 @@ function Top({ onSearch }) {
     const [searchQuery, setSearchQuery] = useState("");
     const handleSearch = () => {onSearch(searchQuery);};
     const backgroundImageStyle = {
-        backgroundImage: `url("./images/300.jpeg")`, // Update the path to your image
+        backgroundImage: `url("./images/300.jpeg")`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     };
@@ -38,7 +38,7 @@ function Top({ onSearch }) {
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             style={{ border: 'none' }}  
-                            onKeyDown={handleKeyDown} // Call handleKeyDown on key press
+                            onKeyDown={handleKeyDown} 
                         /> 
                     </div>
                     <div className="additional-links">

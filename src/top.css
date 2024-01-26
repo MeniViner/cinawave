@@ -16,18 +16,17 @@
 
 .content {
   position: relative;
-  z-index: 2; /* Ensure content is on top of the background image */
+  z-index: 2;
 }
 
 .main-main {
   position: relative;
   width: 100vw;
   height: 70vh;
-  overflow: hidden; /* Hide overflow to prevent scrollbars */
+  overflow: hidden;
 }
 
 .main{
-  /* border: chartreuse solid 5px; */
   margin: 5%;
   height: 80;
 }
@@ -82,14 +81,14 @@ color: #ffffff;
 font-family: 'Montserrat', sans-serif;
 font-size: 4em;
 font-weight: bold;
-line-height: 0.8; /* Adjust as needed */
+line-height: 0.8;
 }
 
 .g {
 color: #ffffff;
 font: 1.2rem "Fira Sans", sans-serif;    
 font-size: 2em;
-line-height: 0.4; /* Adjust as needed */
+line-height: 0.4;
 }
 
 
@@ -98,7 +97,7 @@ line-height: 0.4; /* Adjust as needed */
 }
 
 .overlay {
-background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for transparency */
+background-color: rgba(0, 0, 0, 0.7);
 position: absolute;
 top: 0;
 left: 0;
@@ -120,11 +119,11 @@ z-index: 1;
   text-decoration: none;
   margin-right: 40%;
   white-space: nowrap;
-  transition: transform 0.3s; /* Add transition for smoother animation */
+  transition: transform 0.3s;
 }
 
 .additional-links a:hover {
-  transform: scale(1.2); /* Enlarge the hovered link */
+  transform: scale(1.2); 
   color: white;
 }
 
