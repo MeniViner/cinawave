@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Top from './top';
 import Card from './card';
 import InsideCard from './insideCard';
+import MyList from './myList';
 import getAllTrendingMovies from './database';
 import './App.css';
 import './top.css';
 import './card.css';
 import './insideCard.css';
+import './MyList.css'; // Import MyList styles
 
 function App() {
   const [originalMovies, setOriginalMovies] = useState([]);
@@ -23,24 +25,23 @@ function App() {
     fetchMovies();
   }, []);
 
-const handleSearch = (searchQuery) => {
-  console.log("Search query:", searchQuery);
-  
-  if (!originalMovies || !Array.isArray(originalMovies)) {
-    return;
-  }
+  const handleSearch = (searchQuery) => {
+    console.log("Search query:", searchQuery);
+    
+    if (!originalMovies || !Array.isArray(originalMovies)) {
+      return;
+    }
 
-  if (searchQuery.trim() === "") {
-    setFilteredMovies(originalMovies);
-  } else {
-    const filtered = originalMovies.filter(movie =>
-      movie.original_title && movie.original_title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    console.log("Filtered movies:", filtered);
-    setFilteredMovies(filtered);
-  }
-};
-
+    if (searchQuery.trim() === "") {
+      setFilteredMovies(originalMovies);
+    } else {
+      const filtered = originalMovies.filter(movie =>
+        movie.original_title && movie.original_title.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      console.log("Filtered movies:", filtered);
+      setFilteredMovies(filtered);
+    }
+  };
 
   return (
     <Router>
@@ -49,16 +50,12 @@ const handleSearch = (searchQuery) => {
         <Routes>
           <Route path="/" element={<Home filteredMovies={filteredMovies} />} />
           <Route path="/card/:insideCard" element={<InsideCard filteredMovies={filteredMovies} />} />
-          <Route path="/my-list" element={<MyList />} />
+          <Route path="/my-list" element={<MyList filteredMovies={filteredMovies} />} />
           <Route path="/series" element={<Series />} />
         </Routes>
       </div>
     </Router>
   );
-}
-
-function MyList() {
-  return <h2>This is Page 1</h2>;
 }
 
 function Series() {

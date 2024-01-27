@@ -127,6 +127,14 @@ z-index: 1;
   color: white;
 }
 
+.active-link{
+  transform: scale(1.2); 
+  color: white !important;
+  font-weight: bold;
+  z-index: 2;
+
+}
+
 
 
 

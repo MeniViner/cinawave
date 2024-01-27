@@ -3,13 +3,14 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMagnifyingGlass, faSearch, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link ,useLocation} from 'react-router-dom'; 
 
 
 library.add(faMagnifyingGlass, faSearch, faBarsStaggered);
 
 function Top({ onSearch }) {
     const [searchQuery, setSearchQuery] = useState("");
+    const location = useLocation(); // Get the current location
     const handleSearch = () => {onSearch(searchQuery);};
     const backgroundImageStyle = {
         backgroundImage: `url("./images/300.jpeg")`, 
@@ -39,15 +40,15 @@ function Top({ onSearch }) {
                             onChange={(e) => setSearchQuery(e.target.value)}
                             style={{ border: 'none' }}  
                             onKeyDown={handleKeyDown} 
-                        /> 
+                        />
                     </div>
                     <div className="additional-links">
-                        <Link to="/my-list">my list</Link>
-                        <Link to="/series">series</Link>
-                        <Link to="/">Home</Link>
+                        <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>Home</Link>
+                        <Link to="/my-list" className={location.pathname === '/my-list' ? 'active-link' : ''}>My List</Link>
+                        <Link to="/series" className={location.pathname === '/series' ? 'active-link' : ''}>Series</Link>
                     </div>
-                    <div className="burger-menu right-align" >
-                        <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>        
+                    <div className="burger-menu right-align">
+                        <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>
                     </div>
                 </div>
                 <div className="content">
@@ -68,6 +69,5 @@ function Top({ onSearch }) {
         </div>
     );
 }
-
 
 export default Top;
