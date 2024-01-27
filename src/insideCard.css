@@ -1,13 +1,12 @@
 .insideCard {
     /* border: yellow solid 3px; */
-    position: relative; /* Make the container relative */
+    position: relative;
     background-color: #383333;
     height: 600px;
     width: 1100px;
     text-align: center;
     margin: auto;
-    overflow: hidden; /* Hide overflow content */
-
+    overflow: hidden;
 }
 
 .background-image{
@@ -26,11 +25,6 @@
     overflow: hidden;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgb(0, 0, 0) ;
-}
-
-
-.j{
-    color: #ffffff;
 }
 
 .like {
