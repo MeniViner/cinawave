@@ -49,3 +49,22 @@
 .j{
     color: #ffffff;
 }
+
+.like {
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+    cursor: pointer; /* Add cursor pointer */
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.like:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+}
+
+.like.liked {
+    color: red; /* Change color when liked */
+    transform: scale(1.5); /* Enlarge when liked */
+}

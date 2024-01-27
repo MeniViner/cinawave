@@ -1,13 +1,30 @@
-// InsideCard.js
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function InsideCard({ filteredMovies }) {
-  const [like, setLike] = useState(0);
-  const [disLike, setDislike] = useState(0);
+  const [liked, setLiked] = useState(false);
   const { insideCard } = useParams();
   const selectedMovie = filteredMovies.find(movie => movie.original_title === decodeURIComponent(insideCard));
+
+  useEffect(() => {
+    const likedMovies = JSON.parse(localStorage.getItem('likedMovies')) || [];
+    const isLiked = likedMovies.some(movie => movie.original_title === selectedMovie.original_title);
+    setLiked(isLiked);
+  }, [selectedMovie]);
+
+  const toggleLike = () => {
+    setLiked(!liked);
+    if (!liked) {
+      const likedMovies = JSON.parse(localStorage.getItem('likedMovies')) || [];
+      localStorage.setItem('likedMovies', JSON.stringify([...likedMovies, selectedMovie]));
+    } else {
+      const likedMovies = JSON.parse(localStorage.getItem('likedMovies')) || [];
+      const updatedLikedMovies = likedMovies.filter(movie => movie.original_title !== selectedMovie.original_title);
+      localStorage.setItem('likedMovies', JSON.stringify(updatedLikedMovies));
+    }
+  };
 
   if (!selectedMovie) {
     return <div>Movie not found</div>;
@@ -22,34 +39,13 @@ function InsideCard({ filteredMovies }) {
       />
       <div className='info'>
          <h1>{selectedMovie.title}</h1>
-            <h2>Overview: {selectedMovie.overview}</h2>
-            {/* <p>{selectedMovie.genres}</p>
-            <p>{selectedMovie.country}</p>
-            <p>{selectedMovie.duration}</p>
-            <p>{selectedMovie.production}</p>
-            <p>{selectedMovie.release}</p>
-            <p>IMDB: {selectedMovie.imdb}</p> */}
-            <br></br><br></br><br></br><br></br>
-            <div className="likes">
-                <img
-                    src="/images/like.png"
-                    alt="Like"
-                    className="like-img"
-                    onClick={() => setLike(like + 1)}
-                />
-                <div className="text-like">{like}</div>
-                <div>
-                <img
-                    src="/images/dislike.png"
-                    alt="disLike"
-                    className="like-img"
-                    onClick={() => setDislike(disLike + 1)}
-                />
-                </div>
-                <div className="text-like">{disLike}</div>
+         <h2>Overview: {selectedMovie.overview}</h2>
+         <br /><br /><br /><br />
+            <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
+              <FontAwesomeIcon icon={faHeart} />
             </div>
-        </div>
-      </div>
+          </div>
+    </div>
   );
 }
 

@@ -47,6 +47,15 @@
     transition: transform 0.4s;
 }
 
+.like {
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1; 
+    font-size: x-large;
+}
+
 #main-info-movie{
     display: flex;
     flex-direction: row;

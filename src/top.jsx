@@ -39,7 +39,7 @@ function Top({ onSearch }) {
                             onChange={(e) => setSearchQuery(e.target.value)}
                             style={{ border: 'none' }}  
                             onKeyDown={handleKeyDown} 
-                        /> 
+                        />
                     </div>
                     <div className="additional-links">
                         <Link to="/my-list">my list</Link>
@@ -47,8 +47,7 @@ function Top({ onSearch }) {
                         <Link to="/">Home</Link>
                     </div>
                     <div className="burger-menu right-align" >
-                        <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>        
-                    </div>
+                        <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>                    </div>
                 </div>
                 <div className="content">
                     <div className="main">

@@ -1,4 +1,7 @@
-import React from "react";
+import React  from "react";
+import {faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 function Card({ movie }) {
     return (
@@ -8,6 +11,9 @@ function Card({ movie }) {
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt={movie.title}
             />
+            </div>
+            <div className="like" >
+                    <FontAwesomeIcon icon={faHeart} />
             </div>
             <div className="movie-description">
                 <div id="main-info-movie">
@@ -19,6 +25,7 @@ function Card({ movie }) {
                     </div>
                 </div>
                 <h1 className="movie-name">{movie.title}</h1>
+
             </div>
         </div>
     );
