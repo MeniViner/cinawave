@@ -12,7 +12,7 @@ function Card({ movie }) {
                 alt={movie.title}
             />
             </div>
-            <div className="like" >
+            <div className="likes" >
                     <FontAwesomeIcon icon={faHeart} />
             </div>
             <div className="movie-description">

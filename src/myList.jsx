@@ -11,7 +11,7 @@ function MyList({ filteredMovies }) {
     const availableLikedMovies = storedLikedMovies.filter(movie =>
       filteredMovies.some(filteredMovie => filteredMovie.original_title === movie.original_title)
     );
-    setLikedMovies(availableLikedMovies);
+  setLikedMovies(availableLikedMovies);
   }, [filteredMovies]);
 
   return (

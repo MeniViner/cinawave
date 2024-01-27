@@ -37,13 +37,13 @@ function InsideCard({ filteredMovies }) {
         src={`https://image.tmdb.org/t/p/w500/${selectedMovie.backdrop_path}`}
         alt={selectedMovie.title}
       />
+      <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
+              <FontAwesomeIcon icon={faHeart} />
+            </div>
       <div className='info'>
          <h1>{selectedMovie.title}</h1>
          <h2>Overview: {selectedMovie.overview}</h2>
          <br /><br /><br /><br />
-            <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
-              <FontAwesomeIcon icon={faHeart} />
-            </div>
           </div>
     </div>
   );

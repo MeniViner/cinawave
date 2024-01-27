@@ -28,43 +28,29 @@
     text-shadow: 2px 2px 4px rgb(0, 0, 0) ;
 }
 
-.like-img {
-    width: 30px;
-    height: 30px;
-}
-  
-.likes {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Center the likes and dislikes horizontally */
-    gap: 12px;
-}
-  
-.text-like {
-    font-size: large;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px black ;
-}
 
 .j{
     color: #ffffff;
 }
 
 .like {
+    margin-right: 5%;
     color: white;
     position: absolute;
     top: 5px;
     right: 5px;
     z-index: 1;
-    cursor: pointer; /* Add cursor pointer */
-    transition: transform 0.3s ease; /* Add transition effect */
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+    font-size: 50px;
+    margin-top: 2%;
 }
 
 .like:hover {
-    transform: scale(1.2); /* Enlarge on hover */
+    transform: scale(1.2);
 }
 
 .like.liked {
-    color: red; /* Change color when liked */
-    transform: scale(1.5); /* Enlarge when liked */
+    color: red;
+    transform: scale(1.5);
 }
