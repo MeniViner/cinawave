@@ -4,6 +4,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function InsideCard({ filteredMovies }) {
+
   const [liked, setLiked] = useState(false);
   const { insideCard } = useParams();
   const selectedMovie = filteredMovies.find(movie => movie.original_title === decodeURIComponent(insideCard));
@@ -27,7 +28,7 @@ function InsideCard({ filteredMovies }) {
   };
 
   if (!selectedMovie) {
-    return <div>Movie not found</div>;
+    return <div className='Movie-not-found'>Movie not found</div>;
   }
 
   return (
@@ -39,12 +40,12 @@ function InsideCard({ filteredMovies }) {
       />
       <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
               <FontAwesomeIcon icon={faHeart} />
-            </div>
+      </div>
       <div className='info'>
          <h1>{selectedMovie.title}</h1>
          <h2>Overview: {selectedMovie.overview}</h2>
          <br /><br /><br /><br />
-          </div>
+      </div>
     </div>
   );
 }

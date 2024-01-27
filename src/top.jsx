@@ -38,7 +38,6 @@ function Top({ onSearch }) {
                             placeholder="Search..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            style={{ border: 'none' }}  
                             onKeyDown={handleKeyDown} 
                         />
                     </div>
@@ -47,16 +46,16 @@ function Top({ onSearch }) {
                         <Link to="/my-list" className={location.pathname === '/my-list' ? 'active-link' : ''}>My List</Link>
                         <Link to="/series" className={location.pathname === '/series' ? 'active-link' : ''}>Series</Link>
                     </div>
-                    <div className="burger-menu right-align">
+                    <div className="burger-menu">
                         <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>
                     </div>
                 </div>
                 <div className="content">
                     <div className="main">
-                        <h1 className="h">Free Movies to Watch,</h1>
-                        <h1 className="h">Anytime Anywhere.</h1>
-                        <h3 className="g">The search is over! Let CinaWawe help you find the perfect </h3>
-                        <h3 className="g">movie to watch tonight for free.</h3>
+                        <h1 className="main-title">Free Movies to Watch,</h1>
+                        <h1 className="main-title">Anytime Anywhere.</h1>
+                        <h3 className="secondary-title">The search is over! Let CinaWawe help you find the perfect </h3>
+                        <h3 className="secondary-title">movie to watch tonight for free.</h3>
                         <br></br>
                         <div className="button">
                             <h1>

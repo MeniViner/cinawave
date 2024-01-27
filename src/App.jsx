@@ -9,7 +9,7 @@ import './App.css';
 import './top.css';
 import './card.css';
 import './insideCard.css';
-import './MyList.css'; // Import MyList styles
+import './MyList.css';
 
 function App() {
   const [originalMovies, setOriginalMovies] = useState([]);

@@ -54,3 +54,8 @@
     color: red;
     transform: scale(1.5);
 }
+
+.Movie-not-found{
+    color: white;
+    font-size: xx-large;
+}
