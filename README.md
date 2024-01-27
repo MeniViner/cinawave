@@ -1,5 +1,5 @@
 # 1. Make a Change
-# (Manually edit the file)
+ (Manually edit the file)
 
 # 2. Stage and Commit the Change
 cd path/to/your/local/repository
@@ -11,8 +11,17 @@ git push origin master
 
 # 4. Friend Checks for Changes
 git fetch origin
-git diff --name-only master origin/master
+git diff --name-only master         origin/master
 
 # 5.Friend pull code
 git pull origin master
     
+===============================
+
+problems:
+
+# can't syns changes? run:
+git reset --hard HEAD 
+
+# can't start npm? run:
+npm install react-scripts --save
