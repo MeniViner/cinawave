@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Top from './top';
@@ -51,7 +50,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home filteredMovies={filteredMovies} />} />
           <Route path="/card/:insideCard" element={<InsideCard filteredMovies={filteredMovies} />} />
-          <Route path="/my-list" element={<MyList />} /> {/* Route to MyList component */}
+          <Route path="/my-list" element={<MyList filteredMovies={filteredMovies} />} />
           <Route path="/series" element={<Series />} />
         </Routes>
       </div>
