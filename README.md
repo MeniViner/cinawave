@@ -17,7 +17,6 @@ git diff --name-only master         origin/master
 git pull origin master
     
 ===============================
-
 problems:
 
 # can't syns changes? run:
