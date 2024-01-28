@@ -1,17 +1,15 @@
 import Button from "./Button/Button";
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMagnifyingGlass, faSearch, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Link ,useLocation} from 'react-router-dom'; 
 
 
-library.add(faMagnifyingGlass, faSearch, faBarsStaggered);
-
 function Top({ onSearch }) {
     const [searchQuery, setSearchQuery] = useState("");
-    const location = useLocation(); // Get the current location
+    const location = useLocation();
     const handleSearch = () => {onSearch(searchQuery);};
+
     const backgroundImageStyle = {
         backgroundImage: `url("./images/300.jpeg")`, 
         backgroundSize: 'cover',
@@ -31,7 +29,7 @@ function Top({ onSearch }) {
                 <div className="titel"> 
                     <img className="logo" src="./images/logo.png" alt="logo" width={"20%"}/>
                     <div className="search-box">
-                        <FontAwesomeIcon icon={faSearch} size="lg "/>
+                        <FontAwesomeIcon icon={faSearch} size="lg" id="search-icon" />
                         <input
                             className="search-bar"
                             type="text"                
