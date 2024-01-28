@@ -75,10 +75,11 @@
 }
 
 .additional-links a {
-  font-size: 150%;
+  font-size: 140%;
+  font-family: 'Montserrat', sans-serif;
   color: #e5d9d9;
   text-decoration: none;
-  margin-right: 40%;
+  margin-right: 35%;
   white-space: nowrap;
   transition: transform 0.3s;
 }

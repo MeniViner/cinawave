@@ -39,12 +39,12 @@ function InsideCard({ filteredMovies }) {
         alt={selectedMovie.title}
       />
       <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
-              <FontAwesomeIcon icon={faHeart} />
+        <FontAwesomeIcon icon={faHeart} />
       </div>
       <div className='info'>
-         <h1>{selectedMovie.title}</h1>
-         <h2>Overview: {selectedMovie.overview}</h2>
-         <br /><br /><br /><br />
+        <h1>{selectedMovie.title}</h1>
+        <h2>Overview: {selectedMovie.overview}</h2>
+        <br /><br /><br /><br />
       </div>
     </div>
   );
