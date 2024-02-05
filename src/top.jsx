@@ -1,38 +1,65 @@
-import React, { useState } from "react";
 import Button from "./Button/Button";
+import { faSearch, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
+import { Link ,useLocation} from 'react-router-dom'; 
+
 
 function Top({ onSearch }) {
-
     const [searchQuery, setSearchQuery] = useState("");
-    const handleSearch = () => { onSearch(searchQuery); };
-     
+    const location = useLocation();
+    const handleSearch = () => {onSearch(searchQuery);};
+
+    const backgroundImageStyle = {
+        backgroundImage: `url("./images/300.jpeg")`, 
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+    };
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            handleSearch();
+        }
+    };
+
     return (
-        <div className="main-main">
+        <div className="main-main" style={backgroundImageStyle}>
+            <div className="overlay"></div>
             <div className="up">
-                <div class="titel">
-                    <h1>Reel-Feel</h1> 
+                <br></br>
+                <div className="titel"> 
+                    <img className="logo" src="./images/logo.png" alt="logo" width={"20%"}/>
                     <div className="search-box">
+                        <FontAwesomeIcon icon={faSearch} size="lg" id="search-icon" />
                         <input
                             className="search-bar"
-                            type="text"
-                            placeholder="Search for movies..."
+                            type="text"                
+                            placeholder="Search..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
+                            onKeyDown={handleKeyDown} 
                         />
-                        <button onClick={handleSearch}>Search</button>
+                    </div>
+                    <div className="additional-links">
+                        <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>Home</Link>
+                        <Link to="/my-list" className={location.pathname === '/my-list' ? 'active-link' : ''}>My List</Link>
+                        <Link to="/series" className={location.pathname === '/series' ? 'active-link' : ''}>Series</Link>
+                    </div>
+                    <div className="burger-menu">
+                        <FontAwesomeIcon icon={faBarsStaggered} size="lg" id="burger-menu"/>
                     </div>
                 </div>
-            </div>
-            <div className="main">
-                <h1 className="h">Free Movies to Watch,</h1>
-                <h1 className="h">Anytime Anywhere.</h1>
-                <h2 className="h">
-                    You are just a search away from directly watching any movie, in any quality, you want.
-                    So grab yourself and get going
-                </h2>
-                <div className="main2">
-                    <div className="button">
-                        <h1><Button></Button></h1>
+                <div className="content">
+                    <div className="main">
+                        <h1 className="main-title">Free Movies to Watch,</h1>
+                        <h1 className="main-title">Anytime Anywhere.</h1>
+                        <h3 className="secondary-title">The search is over! Let CinaWawe help you find the perfect </h3>
+                        <h3 className="secondary-title">movie to watch tonight for free.</h3>
+                        <br></br>
+                        <div className="button">
+                            <h1>
+                                <Button></Button>
+                            </h1>
+                        </div>
                     </div>
                 </div>
             </div>
