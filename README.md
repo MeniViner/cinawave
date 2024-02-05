@@ -24,3 +24,8 @@ git reset --hard HEAD
 
 # can't start npm? run:
 npm install react-scripts --save
+
+# not connected
+git config --global user.email "your-email@example.com"
+
+git config --global user.name "Your Name"

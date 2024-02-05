@@ -8,3 +8,4 @@ const root = ReactDOM.createRoot(el);
 
 // root.render(<App/>)
 root.render(<Mosh/>)
+
