@@ -24,3 +24,5 @@ git reset --hard HEAD
 
 # can't start npm? run:
 npm install react-scripts --save
+
+# not connected

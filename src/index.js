@@ -6,6 +6,6 @@ import Mosh from "./mosh";
 const el = document.getElementById('root');
 const root = ReactDOM.createRoot(el);
 
-root.render(<App/>)
-// root.render(<Mosh/>)
+// root.render(<App/>)
+root.render(<Mosh/>)
 
