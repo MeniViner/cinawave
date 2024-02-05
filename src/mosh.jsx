@@ -28,8 +28,7 @@ function Mosh() {
 
                 <form>
                     <h2>select likes to add</h2>
-                    <select onChange={handleChange}>
-                        <option value="0">0</option>
+                    <select value={totalLikes} onChange={handleChange}>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
