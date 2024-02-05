@@ -5,18 +5,19 @@ const UserContext = createContext();
 
 function Mosh() {
     const [totalLikes, setTotalLikes] = useState(0);
+    const [selectedValue, setSelectedValue] = useState(0);
 
     const handleLike = () => {
-        setTotalLikes(totalLikes + 1);
+        setTotalLikes(totalLikes + selectedValue);
     };
 
     const handleDislike = () => {
-        setTotalLikes(totalLikes - 1);
+        setTotalLikes(totalLikes - selectedValue);
     };
 
     const handleChange = (event) => {
-        setTotalLikes(totalLikes + parseInt(event.target.value, 10));
-    }
+        setSelectedValue(parseInt(event.target.value, 10));
+    };
 
     return (
         <UserContext.Provider value={{ totalLikes, handleLike, handleDislike }}>
@@ -35,7 +36,6 @@ function Mosh() {
                     </select>
                 </form>
             </div>
-            
         </UserContext.Provider>
     );
 }
