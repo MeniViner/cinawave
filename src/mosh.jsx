@@ -14,28 +14,27 @@ function Mosh() {
         setTotalLikes(totalLikes - 1);
     };
 
+    const handleChange = (event) => {
+        setTotalLikes(totalLikes += event.target.value);
+    }
+
     return (
         <UserContext.Provider value={{ totalLikes, handleLike, handleDislike }}>
             <div className="main">
                 <Button type="like" />
                 <PrintSum />
                 <Button type="dislike" />
-            </div>
-            <form>
-                <label>Enter your name:
-                    <input type="text" />
-                </label>
-                <label>Enter your name:
-                    <input type="text" />
-                </label>
-                <select 
-                    className="gogo" 
-                    value="" 
-                    onChange=""
-                >
 
-                </select>
-            </form>
+                <form>
+                    <h2>select likes to add</h2>
+                    <select value={totalLikes} onChange={handleChange}>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </form>
+            </div>
+            
         </UserContext.Provider>
     );
 }
