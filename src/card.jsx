@@ -25,7 +25,6 @@ function Card({ movie }) {
                     </div>
                 </div>
                 <h1 className="movie-name">{movie.title}</h1>
-
             </div>
         </div>
     );
