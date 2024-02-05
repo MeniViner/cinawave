@@ -1,56 +1,71 @@
-// import React, { useState, createContext, useContext } from 'react';
-// import './Mosh.css';
+import React, { useState, createContext, useContext } from 'react';
+import './Mosh.css';
 
-// const UserContext = createContext();
+const UserContext = createContext();
 
-// function Mosh() {
-//     const [totalLikes, setTotalLikes] = useState(0);
+function Mosh() {
+    const [totalLikes, setTotalLikes] = useState(0);
 
-//     const handleLike = () => {
-//         setTotalLikes(totalLikes + 1);
-//     };
+    const handleLike = () => {
+        setTotalLikes(totalLikes + 1);
+    };
 
-//     const handleDislike = () => {
-//         setTotalLikes(totalLikes - 1);
-//     };
+    const handleDislike = () => {
+        setTotalLikes(totalLikes - 1);
+    };
 
-//     return (
-//         <UserContext.Provider value={{ totalLikes, handleLike, handleDislike }}>
-//             <div className="main">
-//                 <Button type="like" />
-//                 <PrintSum />
-//                 <Button type="dislike" />
-//             </div>
-//         </UserContext.Provider>
-//     );
-// }
+    return (
+        <UserContext.Provider value={{ totalLikes, handleLike, handleDislike }}>
+            <div className="main">
+                <Button type="like" />
+                <PrintSum />
+                <Button type="dislike" />
+            </div>
+            <form>
+                <label>Enter your name:
+                    <input type="text" />
+                </label>
+                <label>Enter your name:
+                    <input type="text" />
+                </label>
+                <select 
+                    className="gogo" 
+                    value="" 
+                    onChange=""
+                >
 
-// function Button({ type }) {
-//     const { handleLike, handleDislike } = useContext(UserContext);
+                </select>
+            </form>
+        </UserContext.Provider>
+    );
+}
 
-//     const handleClick = () => {
-//         if (type === 'like') {
-//             handleLike();
-//         } else if (type === 'dislike') {
-//             handleDislike();
-//         }
-//     };
+function Button({ type }) {
+    const { handleLike, handleDislike } = useContext(UserContext);
 
-//     return (
-//         <div>
-//             <button className='button' onClick={handleClick}>{type === 'like' ? 'Like' : 'Dislike'}</button>
-//         </div>
-//     );
-// }
+    const handleClick = () => {
+        if (type === 'like') {
+            handleLike();
+        } else if (type === 'dislike') {
+            handleDislike();
+        }
+    };
 
-// function PrintSum() {
-//     const { totalLikes } = useContext(UserContext);
+    return (
+        <div>
+            <button className='button' onClick={handleClick}>{type === 'like' ? 'Like' : 'Dislike'}</button>
+        </div>
+    );
+}
 
-//     return (
-//         <div>
-//             <div className='text'>{totalLikes}</div>
-//         </div>
-//     );
-// }
+function PrintSum() {
+    const { totalLikes } = useContext(UserContext);
 
-// export default Mosh;
+    return (
+        <div>
+            <div className='text'>{totalLikes}</div>
+        </div>
+    );
+}
+
+export default Mosh;
