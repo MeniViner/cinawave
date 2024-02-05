@@ -15,14 +15,14 @@ function Mosh() {
     };
 
     const handleChange = (event) => {
-        setTotalLikes(totalLikes += parseInt(event.target.value));
+        setTotalLikes(totalLikes + parseInt(event.target.value, 10));
     }
 
     return (
         <UserContext.Provider value={{ totalLikes, handleLike, handleDislike }}>
             <div className="main">
                 <Button type="like" />
-                <PrintSum />
+                <PrintSum/>
                 <Button type="dislike" />
 
                 <form>
@@ -52,9 +52,9 @@ function Button({ type }) {
     };
 
     return (
-        <div>
-            <button className='button' onClick={handleClick}>{type === 'like' ? 'Like' : 'Dislike'}</button>
-        </div>
+        <button 
+            className='button' onClick={handleClick}>{type === 'like' ? 'Like' : 'Dislike'}
+        </button>
     );
 }
 
@@ -62,9 +62,7 @@ function PrintSum() {
     const { totalLikes } = useContext(UserContext);
 
     return (
-        <div>
-            <div className='text'>{totalLikes}</div>
-        </div>
+        <div className='text'>{totalLikes}</div>
     );
 }
 
