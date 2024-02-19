@@ -4,6 +4,7 @@ import './Mosh.css';
 const UserContext = createContext();
 
 function Mosh() {
+    
     const [totalLikes, setTotalLikes] = useState(0);
     const [selectedValue, setSelectedValue] = useState(0);
 
@@ -23,7 +24,7 @@ function Mosh() {
         <UserContext.Provider value={{ totalLikes, handleLike, handleDislike }}>
             <div className="main">
                 <Button type="like" />
-                <PrintSum />
+                <PrintSum/>
                 <Button type="dislike" />
                 <form>
                     <h2>select likes to add</h2>
@@ -51,9 +52,9 @@ function Button({ type }) {
     };
 
     return (
-        <div>
-            <button className='button' onClick={handleClick}>{type === 'like' ? 'Like' : 'Dislike'}</button>
-        </div>
+        <button 
+            className='button' onClick={handleClick}>{type === 'like' ? 'Like' : 'Dislike'}
+        </button>
     );
 }
 
@@ -61,9 +62,7 @@ function PrintSum() {
     const { totalLikes } = useContext(UserContext);
 
     return (
-        <div>
-            <div className='text'>{totalLikes}</div>
-        </div>
+        <div className='text'>{totalLikes}</div>
     );
 }
 
