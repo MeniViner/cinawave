@@ -9,8 +9,9 @@
     overflow: hidden;
 }
 
-.background-image{
+.background-image {
     width:100%;
+    /* backdrop-filter: blur(10px); */
 }
 
 .info {
@@ -44,7 +45,7 @@
     transform: scale(1.2);
 }
 
-.like.liked {
+.like .liked {
     color: red;
     transform: scale(1.5);
 }
