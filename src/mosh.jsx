@@ -25,7 +25,6 @@ function Mosh() {
                 <Button type="like" />
                 <PrintSum />
                 <Button type="dislike" />
-
                 <form>
                     <h2>select likes to add</h2>
                     <select  onChange={handleChange}>
@@ -69,3 +68,5 @@ function PrintSum() {
 }
 
 export default Mosh;
+
+
