@@ -13,7 +13,7 @@ function Card({ movie }) {
             />
             </div>
             <div className="likes" >
-                    <FontAwesomeIcon icon={faHeart} />
+                <FontAwesomeIcon icon={faHeart} />
             </div>
             <div className="movie-description">
                 <div id="main-info-movie">
