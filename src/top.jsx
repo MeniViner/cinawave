@@ -95,4 +95,4 @@ function Top({ onSearch }) {
     );
 }
 
-export default Top;
+export default { Top, Titel };
