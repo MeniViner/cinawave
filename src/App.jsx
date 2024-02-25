@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Top from './top';
 import Card from './card';
 import InsideCard from './insideCard';
 import getAllTrendingMovies from './database';
 import MyList from './myList';
+import Top from './top';
 import './App.css';
 import './top.css';
 import './card.css';
 import './insideCard.css';
 import './MyList.css';
 
+
+
 function App() {
   const [originalMovies, setOriginalMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
+
+ 
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -65,8 +69,8 @@ function Series() {
 function Home({ filteredMovies }) {
   return (
     <div className="main-cards">
-      {filteredMovies.map((movie) => (
-        <Link key={movie.originalMovies} to={`/card/${encodeURIComponent(movie.original_title)}`}>
+      {filteredMovies.map((movie, index) => (
+        <Link key={index} to={`/card/${encodeURIComponent(movie.original_title)}`}>
           <Card movie={movie} />
         </Link>
       ))}
