@@ -1,17 +1,16 @@
 import Button from "./Button/Button";
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { faSearch, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-
 
 function Titel({ onSearch, searchQuery, setSearchQuery, handleKeyDown }) {
     const location = useLocation();
 
     return (
         <div className="titel">
-            <img className="logo" src="/images/logo.png" alt="logo" />
+            <img className="logo" src="./images/logo.png" alt="logo" width={"20%"} />
             <div className="search-box">
                 <FontAwesomeIcon icon={faSearch} size="lg" id="search-icon" />
                 <input
@@ -52,7 +51,7 @@ function Top({ onSearch }) {
         }
     };
 
-    if (location.pathname === '/my-list' || location.pathname.startsWith('/card')) {
+    if (location.pathname === '/my-list') {
         return (
             <div>
                 <br />
@@ -96,7 +95,4 @@ function Top({ onSearch }) {
     );
 }
 
-
 export default Top;
-export { Titel };
-

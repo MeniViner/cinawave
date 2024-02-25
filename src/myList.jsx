@@ -14,11 +14,6 @@ function MyList({ filteredMovies }) {
     setLikedMovies(availableLikedMovies);
   }, [filteredMovies]);
 
-  
-  if (likedMovies.length === 0) {
-    return <div className='Movie-not-found'>No liked movies found</div>;
-  }
-
   return (
     <div className="main-cards">
       {likedMovies.map((movie, index) => (

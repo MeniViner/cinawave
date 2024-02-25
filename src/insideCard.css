@@ -1,10 +1,31 @@
 .insideCard {
     /* border: yellow solid 3px; */
     position: relative;
-   
+    background-color: #383333;
+    height: 600px;
+    width: 1100px;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
 }
 
+.background-image{
+    width:100%;
+}
 
+.info {
+    /* border: #c71e1e solid 1px; */
+    position: absolute;
+    bottom: 0; 
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* backdrop-filter: blur(10px); */
+    width: 500px;
+    overflow: hidden;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0) ;
+}
 
 .like {
     margin-right: 5%;
@@ -31,47 +52,4 @@
 .Movie-not-found{
     color: white;
     font-size: xx-large;
-}
-
-
-
-
-
-
-.top-inside{
-    display: flex;
-    flex-direction: row;
-    border: blue solid 2px;
-
-}
-
-.tytel-inside{
-    border: greenyellow solid 2px;
-}
-
-.img-inside{
-    border: red solid 4px;
-    margin: 70px;
-}
-.bootem{
-    border: yellow solid 4px;
-
-}
-
-.info {
-    /* border: #c71e1e solid 1px; */
-    /* position: absolute;
-    bottom: 0; 
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    /* backdrop-filter: blur(10px); */
-    /* width: 500px;
-    overflow: hidden;  */
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0) ;
-}
-
-.background-image{
-    height: 70%;
 }
