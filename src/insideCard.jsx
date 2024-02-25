@@ -49,7 +49,6 @@ function InsideCard({ filteredMovies }) {
           <div className='info'>
             <h1>{selectedMovie.title}</h1>
             <h2>Overview: {selectedMovie.overview}</h2>
-            <br /><br /><br /><br />
           </div>
         </div>
       </div>

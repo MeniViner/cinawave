@@ -46,12 +46,15 @@
 }
 
 .tytel-inside{
+    margin-top: 3%;
+
     border: greenyellow solid 2px;
 }
 
 .img-inside{
     border: red solid 4px;
-    margin: 70px;
+    text-align: center;
+    margin-top: 3%;
 }
 .bootem{
     border: yellow solid 4px;
@@ -74,4 +77,5 @@
 
 .background-image{
     height: 70%;
+ 
 }
