@@ -23,7 +23,7 @@
     transform: scale(1.2);
 }
 
-.like .liked {
+.like.liked {
     color: red;
     transform: scale(1.5);
 }
