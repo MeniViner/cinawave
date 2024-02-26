@@ -47,7 +47,13 @@ function InsideCard({ filteredMovies }) {
         </div>
         <div className="tytel-inside">
           <div className='info'>
-            <h1>{selectedMovie.title}</h1>
+            <div className="name-inside">{selectedMovie.title}</div>
+            <div className="movie-description">
+              {selectedMovie.release_date}
+              {selectedMovie.popularity}
+
+            </div>
+            
             <h2>Overview: {selectedMovie.overview}</h2>
           </div>
         </div>
