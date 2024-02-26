@@ -18,8 +18,8 @@
 }
 
 .titel {
-  margin: 2%;
-  border-radius: 8%;
+  margin: 0;
+  border-radius: 8px;
   color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -29,7 +29,7 @@
   align-items: center;
   height: 70%;
   margin-top: -0.3%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.725);
   padding: 0.3%;
   /* border:  rgb(170, 255, 0) solid 5px; */
 }
