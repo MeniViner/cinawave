@@ -42,19 +42,16 @@
     display: flex;
     flex-direction: row;
     border: blue solid 2px;
-
+    margin-top: 2%;
 }
 
 .tytel-inside{
-    margin-top: 3%;
-
     border: greenyellow solid 2px;
 }
 
 .img-inside{
     border: red solid 4px;
     text-align: center;
-    margin-top: 3%;
 }
 .bootem{
     border: yellow solid 4px;
@@ -78,4 +75,8 @@
 .background-image{
     height: 70%;
  
+}
+.jjj{
+    backdrop-filter: blur(15px); 
+
 }

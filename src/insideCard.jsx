@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-
 function InsideCard({ filteredMovies }) {
   const [liked, setLiked] = useState(false);
   const { insideCard } = useParams();
@@ -35,38 +34,43 @@ function InsideCard({ filteredMovies }) {
     return <div className='Movie-not-found'>Movie not found</div>;
   }
 
+  const backgroundImageStyle = {
+    backgroundImage: `url(https://image.tmdb.org/t/p/w500/${selectedMovie.backdrop_path})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '100vh',
+    position: 'fixed',
+    filter: 'blur(15px)',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: -1,
+  };
+
   return (
     <div className="insideCard">
-      <div className="top-inside">
-        <div className="img-inside">
-          <img
-          className="background-image"
-          src={`https://image.tmdb.org/t/p/w500/${selectedMovie.poster_path}`}
-          alt={selectedMovie.title}
-        />
-        </div>
-        <div className="tytel-inside">
-          <div className='info'>
-            <h1>{selectedMovie.title}</h1>
-            <h2>Overview: {selectedMovie.overview}</h2>
+      <div style={backgroundImageStyle}></div>
+          <div className="top-inside">
+            <div className="img-inside">
+              <img
+                className="background-image"
+                src={`https://image.tmdb.org/t/p/w500/${selectedMovie.poster_path}`}
+                alt={selectedMovie.title}
+              />
+            </div>
+            <div className="tytel-inside">
+              <div className='info'>
+                <div>{selectedMovie.title}</div>
+                <h2>Overview: {selectedMovie.overview}</h2>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="bootem">
-        <h1>gfegf</h1>
-      </div>
-      {/* <img
-        className="background-image"
-        src={`https://image.tmdb.org/t/p/w500/${selectedMovie.backdrop_path}`}
-        alt={selectedMovie.title}
-      />
-      <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
+          <div className="bootem">
+            <h1>gfegf</h1>
+          </div>
+      {/* <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
         <FontAwesomeIcon icon={faHeart} />
-      </div>
-      <div className='info'>
-        <h1>{selectedMovie.title}</h1>
-        <h2>Overview: {selectedMovie.overview}</h2>
-        <br /><br /><br /><br />
       </div> */}
     </div>
   );
