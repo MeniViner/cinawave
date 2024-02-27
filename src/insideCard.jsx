@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { faHeart, faPlay, faPlus, faVideo, faDownload, faShare } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPlus, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from "./Button/Button";
 
 
 function InsideCard({ filteredMovies }) {
@@ -65,7 +64,9 @@ function InsideCard({ filteredMovies }) {
                 <div className="movie-inside-description">
                   
                   <div className="mis-year">{year}</div>
-                  <div className="mis-length">1h 31m</div>
+                  <div className="circle-inside"><FontAwesomeIcon icon={faCircle}/></div>
+                  <div className="mis-length">{selectedMovie.omdbDetails.Runtime}</div>
+                  <div className="circle-inside"><FontAwesomeIcon icon={faCircle}/></div>
                   <div className="mis-format">MP4</div>
 
                 </div>

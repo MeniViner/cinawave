@@ -33,7 +33,32 @@ const getAllTrendingMovies = async () => {
         allMovies = [...allMovies, ...filteredMovies];
     }
 
+    // Fetch movie details for all movies in parallel
+    const movieDetailsPromises = allMovies.map(movie => fetchMovieDetailsFromOMDb(movie.original_title));
+    const movieDetails = await Promise.all(movieDetailsPromises);
+
+    // Add movie details to each movie object
+    allMovies.forEach((movie, index) => {
+        movie.omdbDetails = movieDetails[index];
+    });
+
     return allMovies;
+};
+
+
+// Function to fetch movie details from OMDb API
+const fetchMovieDetailsFromOMDb = async (title) => {
+    const apiKey = '85358ccd';
+    const apiUrl = `http://www.omdbapi.com/?apikey=${apiKey}&t=${encodeURIComponent(title)}`;
+    
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching movie details from OMDb:', error);
+        return null;
+    }
 };
 
 // Example usage

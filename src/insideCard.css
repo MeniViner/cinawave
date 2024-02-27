@@ -62,10 +62,10 @@
     transition: transform 0.3s ease-out;
   }
 
-  .mib-play-btn:hover {
+.mib-play-btn:hover {
     transform: scale(1.015);
     transition: transform 0.3s ease;
-  }
+}
 
 .add-favorite-btn {
     width: 45px;
@@ -102,4 +102,9 @@
 
 .like.liked {
     color: red;
+}
+
+.circle-inside {
+    font-size: 10px;
+    align-items: center;
 }
