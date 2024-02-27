@@ -91,7 +91,7 @@
 
 .background-image{
     height: 70%;
- 
+    border: white solid 4px;
 }
 .jjj{
     backdrop-filter: blur(15px); 

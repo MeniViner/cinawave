@@ -42,12 +42,13 @@ function InsideCard({ filteredMovies }) {
     backgroundPosition: 'center',
     height: '100vh',
     position: 'fixed',
-    filter: 'blur(15px)',
+    filter: 'blur(5px)',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
     zIndex: -1,
+    boxShadow: 'inset 500px 0 200px -50px rgba(0, 0, 0, 1), inset 0 -300px 200px -50px rgba(0, 0, 0, 1)'
   };
 
   return (
