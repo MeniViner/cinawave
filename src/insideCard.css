@@ -1,4 +1,4 @@
-/* .insideCard {
+.insideCard {
     position: relative;
 }
 
@@ -50,26 +50,35 @@
 }
 
 .movie-inside-buttons {
-    display: flex;
-    flex-direction: row;
-    border: brown solid 4px;
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  gap: 10px; 
 }
 
 .mib-play-btn {
-    display: flex;
-    flex-direction: row;
-    gap: 10%;
-    width: 300%;
-    height: 80%;
-    background-color: rgb(255, 255, 255);
+  width: 200px; 
+  height: 40px; 
+  background-color: rgb(255, 255, 255); 
+  border-radius: 8px; 
+  border: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.add-favorite-btn {
+    width: 200%;
+    height: 100%;
+    color: white;
+    background-color: rgb(48, 48, 48);
     border-radius: 8px;
     border: none;
-    margin: 7%;
-    padding: 20%;
+    display: flex;
     justify-content: center;
-
-
 }
+
+  
 
 .mib-play-btn txt {
     font-size: 1.5em;
@@ -81,22 +90,14 @@
     font-weight: bold;
     font-size: 50px;
 }
-.add-favorite-btn {
-    width: 400%;
-    height: 80%;
-    color: white;
-    background-color: rgb(48, 48, 48);
-    border-radius: 8px;
-    border: none;
 
-}
 .like {
     font-size: 25px;
 }
 .like .liked {
     color: red;
     transform: scale(1.5);
-} */
+}
 
 
 
@@ -105,7 +106,7 @@
 
 
 
-
+/* 
 .insideCard {
     border: yellow solid 3px;
     position: relative;
@@ -195,4 +196,4 @@
 .like.liked {
     color: red;
     transform: scale(1.5);
-}
+} */
