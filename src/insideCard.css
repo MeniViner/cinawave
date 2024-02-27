@@ -51,9 +51,21 @@
     align-items: center;
 }
 
+.mib-play-btn {
+    width: 300px; 
+    height: 55px; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 8px; 
+    border: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 6%;
+  }
+
 .add-favorite-btn {
-    width: 200px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     color: white;
     background-color: rgb(48, 48, 48);
     border-radius: 8px;
@@ -61,6 +73,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.add-favorite-btn:hover {
+    background-color: rgb(130, 130, 130);
+    transition: background-color 0.6s ease;
 }
 
 .mib-play-btn txt,
@@ -72,7 +89,7 @@
 .mib-play-btn plBt {
     font-size: 1.5em;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 20px;
 }
 
 .like {
@@ -81,5 +98,4 @@
 
 .like.liked {
     color: red;
-    transform: scale(1.5);
 }
