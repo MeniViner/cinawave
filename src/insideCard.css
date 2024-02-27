@@ -10,7 +10,6 @@
 .top-inside {
     display: flex;
     flex-direction: row;
-    /* border: blue solid 2px; */
     margin-top: 2%;
 }
 
@@ -18,12 +17,10 @@
     margin-top: 18%;
     margin-left: 8%;
     margin-right: 50%;
-    /* border: greenyellow solid 2px; */
     color: white;
 }
 
 .bottom {
-    /* border: yellow solid 4px; */
     height: 100px;
 }
 
@@ -54,7 +51,7 @@
 .mib-play-btn {
     width: 320px; 
     height: 45px; 
-    background-color: rgb(238, 234, 234); 
+    background-color: rgb(255, 255, 255); 
     border-radius: 8px; 
     border: none; 
     display: flex;
