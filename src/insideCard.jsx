@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faPlay, faBookmark, faVideo, faDownload, faShare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Button from "./Button/Button";
+
 
 function InsideCard({ filteredMovies }) {
   const [liked, setLiked] = useState(false);
@@ -52,28 +54,48 @@ function InsideCard({ filteredMovies }) {
     <div className="insideCard">
       <div style={backgroundImageStyle}></div>
           <div className="top-inside">
-            <div className="img-inside">
-              <img
-                className="background-image"
-                src={`https://image.tmdb.org/t/p/w500/${selectedMovie.poster_path}`}
-                alt={selectedMovie.title}
-              />
-            </div>
-            <div className="tytel-inside">
-              <div className='info'>
-                <div>{selectedMovie.title}</div>
-                <h2>Overview: {selectedMovie.overview}</h2>
-                {selectedMovie.release_date}
-                {selectedMovie.popularity}
-              </div>
+            
+            <div className="inside-info">
+                <div className="name-inside">{selectedMovie.title}</div>
+ 
+                <div className="movie-inside-description">
+                  <div className="mis-year">{selectedMovie.release_date}</div>
+                  <div className="mis-length">1h 31m</div>
+                  <div className="mis-format">MP4</div>
+
+                </div>
+
+                <div className="movie-inside-genre">
+                  {/* {selectedMovie.genres.map(genre => genre.name).join(', ')} */}
+                  {selectedMovie.genre_ids}
+                </div>
+
+                <div className="movie-inside-buttons">
+
+                  <div className="mib-play">
+                    <button className="mib-play-bt">
+                      <FontAwesomeIcon icon={faPlay}/>
+                      <txt>Play</txt>
+                    </button>
+                  </div>
+            
+                  <div className="mib-favorite">
+                    <FontAwesomeIcon icon={faBookmark}/>
+                  </div> 
+
+                </div>
+                
+                <div className="text-description">Overview: {selectedMovie.overview}</div>
+
             </div>
           </div>
-          <div className="bootem">
-            <h1>gfegf</h1>
+          <div className="bottom">
+          {/* <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
+            <FontAwesomeIcon icon={faHeart} />
+          </div> */}
+            
           </div>
-      {/* <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
-        <FontAwesomeIcon icon={faHeart} />
-      </div> */}
+      
     </div>
   );
 }
