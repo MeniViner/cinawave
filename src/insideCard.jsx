@@ -51,6 +51,9 @@ function InsideCard({ filteredMovies }) {
     boxShadow: 'inset 500px 0 200px -50px rgba(0, 0, 0, 1), inset 0 -300px 200px -50px rgba(0, 0, 0, 1)'
   };
 
+  const releaseDate  = selectedMovie.release_date
+  const year = (new Date(releaseDate)).getFullYear(); 
+
   return (
     <div className="insideCard">
       <div style={backgroundImageStyle}></div>
@@ -60,7 +63,8 @@ function InsideCard({ filteredMovies }) {
                 <div className="name-inside">{selectedMovie.title}</div>
  
                 <div className="movie-inside-description">
-                  <div className="mis-year">{selectedMovie.release_date}</div>
+                  
+                  <div className="mis-year">{year}</div>
                   <div className="mis-length">1h 31m</div>
                   <div className="mis-format">MP4</div>
 
