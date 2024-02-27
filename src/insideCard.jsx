@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { faHeart, faPlay, faPlus, faVideo, faDownload, faShare } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faPlay, faPlus, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from "./Button/Button";
-
 
 function InsideCard({ filteredMovies }) {
   const [liked, setLiked] = useState(false);
@@ -88,8 +86,8 @@ function InsideCard({ filteredMovies }) {
             
                   <div>
                     <button className="add-favorite-btn"> 
-                      <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
-                        <FontAwesomeIcon icon={faPlus}/>
+                      <div className="like" onClick={toggleLike}>
+                        <FontAwesomeIcon icon={liked ? faCheck : faPlus}/>
                       </div>
                     </button>
                   </div> 
