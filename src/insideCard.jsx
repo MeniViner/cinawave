@@ -48,7 +48,7 @@ function InsideCard({ filteredMovies }) {
     right: 0,
     bottom: 0,
     zIndex: -1,
-    boxShadow: 'inset 500px 0 200px -50px rgba(0, 0, 0, 1), inset 0 -300px 200px -50px rgba(0, 0, 0, 1)'
+    boxShadow: 'inset 500px 0 400px -50px rgba(0, 0, 0, 1), inset 0 -300px 200px -50px rgba(0, 0, 0, 1)'
   };
 
   return (
