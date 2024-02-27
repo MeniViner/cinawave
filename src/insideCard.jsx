@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { faHeart, faPlay, faBookmark, faVideo, faDownload, faShare } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faPlay, faPlus, faVideo, faDownload, faShare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from "./Button/Button";
 
@@ -71,22 +71,27 @@ function InsideCard({ filteredMovies }) {
                   {selectedMovie.genre_ids}
                 </div>
 
+                <div className="text-description">Overview: {selectedMovie.overview}</div>
+
                 <div className="movie-inside-buttons">
 
-                  <div className="mib-play">
-                    <button className="mib-play-bt">
-                      <FontAwesomeIcon icon={faPlay}/>
-                      <txt>Play</txt>
+                  <div>
+                    <button className="mib-play-btn">
+                      <plBt><FontAwesomeIcon icon={faPlay}/></plBt>
+                      <txt>Watch now</txt>
                     </button>
                   </div>
             
-                  <div className="mib-favorite">
-                    <FontAwesomeIcon icon={faBookmark}/>
+                  <div>
+                    <button className="add-favorite-btn"> 
+                      <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
+                        <FontAwesomeIcon icon={faPlus}/>
+                      </div>
+                    </button>
                   </div> 
-
                 </div>
                 
-                <div className="text-description">Overview: {selectedMovie.overview}</div>
+                
 
             </div>
           </div>

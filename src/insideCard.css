@@ -1,14 +1,11 @@
-.insideCard {
-    /* border: yellow solid 3px; */
+/* .insideCard {
     position: relative;
-   
 }
 
 .Movie-not-found{
     color: white;
     font-size: xx-large;
 }
-
 
 .top-inside{
     display: flex;
@@ -33,39 +30,20 @@
     
 }
 
-.info {
-    /* border: #c71e1e solid 1px; */
-    /* position: absolute;
-    bottom: 0; 
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    /* backdrop-filter: blur(10px); */
-    /* width: 500px;
-    overflow: hidden;  */
-    color: #ffffff;
-    /* text-shadow: 2px 2px 4px rgb(0, 0, 0) ; */
-}
-
 .name-inside {
     font-family: 'Arial', sans-serif;
     font-size: 3em; 
     font-weight: bold;
 }
+
 .movie-inside-description {
     display: flex;
     flex-direction: row;
     gap: 1%;
     
 }
-.movie-inside-buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 1%;
-}
 
 .text-description {
-    align-items: center;
     width: 60%;
     font-size: 1.2em;
     
@@ -74,50 +52,147 @@
 .movie-inside-buttons {
     display: flex;
     flex-direction: row;
-    gap: 5%;
+    border: brown solid 4px;
 }
 
-.mib-play-bt {
+.mib-play-btn {
     display: flex;
     flex-direction: row;
     gap: 10%;
-    width: 200%;
+    width: 300%;
+    height: 80%;
     background-color: rgb(255, 255, 255);
-    border-radius: 20px;
+    border-radius: 8px;
     border: none;
     margin: 7%;
     padding: 20%;
     justify-content: center;
+
+
 }
 
+.mib-play-btn txt {
+    font-size: 1.5em;
+    font-weight: bold;
 
-.background-image{
-    height: 70%;
-    border: white solid 4px;
 }
-.jjj{
-    backdrop-filter: blur(15px); 
-}
-
-
-.like {
-    margin-right: 5%;
-    color: white;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    z-index: 1;
-    cursor: pointer;
-    transition: transform 0.3s ease; 
+.mib-play-btn plBt {
+    font-size: 1.5em;
+    font-weight: bold;
     font-size: 50px;
+}
+.add-favorite-btn {
+    width: 400%;
+    height: 80%;
+    color: white;
+    background-color: rgb(48, 48, 48);
+    border-radius: 8px;
+    border: none;
+
+}
+.like {
+    font-size: 25px;
+}
+.like .liked {
+    color: red;
+    transform: scale(1.5);
+} */
+
+
+
+
+
+
+
+
+
+.insideCard {
+    border: yellow solid 3px;
+    position: relative;
+}
+
+.Movie-not-found {
+    color: white;
+    font-size: xx-large;
+}
+
+.top-inside {
+    display: flex;
+    flex-direction: row;
+    border: blue solid 2px;
     margin-top: 2%;
 }
 
-.like:hover {
-    transform: scale(1.2);
+.inside-info {
+    margin-top: 18%;
+    margin-left: 8%;
+    margin-right: 50%;
+    border: greenyellow solid 2px;
+    color: white;
 }
 
-.like .liked {
+.bottom {
+    border: yellow solid 4px;
+    height: 100px;
+}
+
+.name-inside {
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.movie-inside-description {
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+}
+
+.text-description {
+    width: 60%;
+    font-size: 1.2em;
+}
+
+.movie-inside-buttons {
+    display: flex;
+    flex-direction: row;
+    border: brown solid 4px;
+}
+
+.mib-play-btn,
+.add-favorite-btn {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.mib-play-btn,
+.add-favorite-btn  {
+    width: 400%;
+    height: 100%;
+    color: white;
+    background-color: rgb(48, 48, 48);
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mib-play-btn txt,
+.add-favorite-btn .like {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.mib-play-btn plBt {
+    font-size: 50px;
+}
+
+.like {
+    font-size: 25px;
+}
+
+.like.liked {
     color: red;
     transform: scale(1.5);
 }
