@@ -47,7 +47,7 @@ function InsideCard({ filteredMovies }) {
     right: 0,
     bottom: 0,
     zIndex: -1,
-    boxShadow: 'inset 500px 0 200px -50px rgba(0, 0, 0, 1), inset 0 -300px 200px -50px rgba(0, 0, 0, 1)'
+    boxShadow: 'inset 500px 0 400px -50px rgba(0, 0, 0, 1), inset 0 -300px 200px -50px rgba(0, 0, 0, 1)'
   };
 
   const releaseDate  = selectedMovie.release_date
@@ -89,23 +89,18 @@ function InsideCard({ filteredMovies }) {
             
                   <div>
                     <button className="add-favorite-btn"> 
-                      <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
-                        <FontAwesomeIcon icon={faPlus}/>
+                      <div className="like" onClick={toggleLike}>
+                        <FontAwesomeIcon icon={liked ? faCheck : faPlus}/>
                       </div>
                     </button>
                   </div> 
                 </div>
                 
-                
+              
 
             </div>
           </div>
-          <div className="bottom">
-          {/* <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
-            <FontAwesomeIcon icon={faHeart} />
-          </div> */}
-            
-          </div>
+      
       
     </div>
   );

@@ -99,11 +99,6 @@
 .like {
     font-size: 25px;
 }
-
-.like.liked {
-    color: red;
-}
-
 .circle-inside {
     font-size: 10px;
     align-items: center;
