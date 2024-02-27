@@ -40,25 +40,19 @@ function InsideCard({ filteredMovies }) {
     backgroundPosition: 'center',
     height: '100vh',
     position: 'fixed',
-    filter: 'blur(15px)',
+    filter: 'blur(5px)',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
     zIndex: -1,
+    boxShadow: 'inset 500px 0 200px -50px rgba(0, 0, 0, 1), inset 0 -300px 200px -50px rgba(0, 0, 0, 1)'
   };
 
   return (
     <div className="insideCard">
       <div style={backgroundImageStyle}></div>
           <div className="top-inside">
-            <div className="img-inside">
-              <img
-                className="background-image"
-                src={`https://image.tmdb.org/t/p/w500/${selectedMovie.poster_path}`}
-                alt={selectedMovie.title}
-              />
-            </div>
             <div className="tytel-inside">
               <div className='info'>
                 <div>{selectedMovie.title}</div>
@@ -70,10 +64,11 @@ function InsideCard({ filteredMovies }) {
           </div>
           <div className="bootem">
             <h1>gfegf</h1>
+            {/* <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
+              <FontAwesomeIcon icon={faHeart} />
+            </div> */}
           </div>
-      {/* <div className={`like ${liked ? 'liked' : ''}`} onClick={toggleLike}>
-        <FontAwesomeIcon icon={faHeart} />
-      </div> */}
+
     </div>
   );
 }

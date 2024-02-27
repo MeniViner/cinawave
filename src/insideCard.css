@@ -3,8 +3,7 @@
     position: relative;
    
 }
-
-
+  
 
 .like {
     margin-right: 5%;
@@ -49,10 +48,6 @@
     border: greenyellow solid 2px;
 }
 
-.img-inside{
-    border: red solid 4px;
-    text-align: center;
-}
 .bootem{
     border: yellow solid 4px;
 
@@ -86,9 +81,10 @@
 
 .background-image{
     height: 70%;
- 
+    border: white solid 4px;
 }
 .jjj{
     backdrop-filter: blur(15px); 
 
 }
+
