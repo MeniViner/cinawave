@@ -2,116 +2,6 @@
     position: relative;
 }
 
-.Movie-not-found{
-    color: white;
-    font-size: xx-large;
-}
-
-.top-inside{
-    display: flex;
-    flex-direction: row;
-    border: blue solid 2px;
-    margin-top: 2%;
-}
-
-.inside-info{
-    margin-top: 18%;
-    margin-left: 8%;
-    margin-right: 50%;
-    
-    border: greenyellow solid 2px;
-    color: white;
-}
-
-
-.bottom{
-    border: yellow solid 4px;
-    height: 100px;
-    
-}
-
-.name-inside {
-    font-family: 'Arial', sans-serif;
-    font-size: 3em; 
-    font-weight: bold;
-}
-
-.movie-inside-description {
-    display: flex;
-    flex-direction: row;
-    gap: 1%;
-    
-}
-
-.text-description {
-    width: 60%;
-    font-size: 1.2em;
-    
-}
-
-.movie-inside-buttons {
-  display: flex;
-  flex-direction: row; 
-  align-items: center; 
-  gap: 10px; 
-}
-
-.mib-play-btn {
-  width: 200px; 
-  height: 40px; 
-  background-color: rgb(255, 255, 255); 
-  border-radius: 8px; 
-  border: none; 
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
-
-.add-favorite-btn {
-    width: 200%;
-    height: 100%;
-    color: white;
-    background-color: rgb(48, 48, 48);
-    border-radius: 8px;
-    border: none;
-    display: flex;
-    justify-content: center;
-}
-
-  
-
-.mib-play-btn txt {
-    font-size: 1.5em;
-    font-weight: bold;
-
-}
-.mib-play-btn plBt {
-    font-size: 1.5em;
-    font-weight: bold;
-    font-size: 50px;
-}
-
-.like {
-    font-size: 25px;
-}
-.like .liked {
-    color: red;
-    transform: scale(1.5);
-}
-
-
-
-
-
-
-
-
-/* 
-.insideCard {
-    border: yellow solid 3px;
-    position: relative;
-}
-
 .Movie-not-found {
     color: white;
     font-size: xx-large;
@@ -157,19 +47,13 @@
 .movie-inside-buttons {
     display: flex;
     flex-direction: row;
-    border: brown solid 4px;
+    gap: 10px;
+    align-items: center;
 }
 
-.mib-play-btn,
 .add-favorite-btn {
-    flex: 1;
-    margin: 0 5px;
-}
-
-.mib-play-btn,
-.add-favorite-btn  {
-    width: 400%;
-    height: 100%;
+    width: 200px;
+    height: 40px;
     color: white;
     background-color: rgb(48, 48, 48);
     border-radius: 8px;
@@ -186,6 +70,8 @@
 }
 
 .mib-play-btn plBt {
+    font-size: 1.5em;
+    font-weight: bold;
     font-size: 50px;
 }
 
@@ -196,4 +82,4 @@
 .like.liked {
     color: red;
     transform: scale(1.5);
-} */
+}
