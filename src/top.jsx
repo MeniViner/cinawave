@@ -6,8 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
-function Titel({ onSearch, searchQuery, setSearchQuery, handleKeyDown }) {
+function Titel({ searchQuery, setSearchQuery, handleKeyDown }) {
     const location = useLocation();
+    
+    
 
     return (
         <div className="titel">

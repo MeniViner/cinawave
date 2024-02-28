@@ -14,10 +14,14 @@
 }
 
 .inside-info {
-    margin-top: 18%;
-    margin-left: 8%;
+    margin-top: 15%;
+    margin-left: 7%;
     margin-right: 50%;
     color: white;
+}
+
+.inside-info > div {
+    margin-bottom: 10px;
 }
 
 .bottom {
@@ -26,13 +30,14 @@
 
 .name-inside {
     font-family: 'Arial', sans-serif;
-    font-size: 3em;
+    font-size: 5em;
     font-weight: bold;
 }
 
 .movie-inside-description {
     display: flex;
     flex-direction: row;
+    align-items: center; 
     gap: 1%;
 }
 
@@ -49,8 +54,8 @@
 }
 
 .mib-play-btn {
-    width: 320px; 
-    height: 45px; 
+    width: 350px; 
+    height: 55px; 
     background-color: rgb(255, 255, 255); 
     border-radius: 8px; 
     border: none; 
@@ -68,8 +73,8 @@
 }
 
 .add-favorite-btn {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     color: white;
     background-color: rgb(48, 48, 48);
     border-radius: 8px;
@@ -100,6 +105,26 @@
     font-size: 25px;
 }
 .circle-inside {
-    font-size: 10px;
+    font-size: 3.5px;
     align-items: center;
+    color: #acacac;
 }
+
+.movie-inside-genre {
+    display: flex; 
+    border-radius: 25px;
+    padding: 5px; 
+}
+
+.genre {
+    margin-right: 5px;
+    padding: 5px; /* Add padding */
+    border-radius: 5px; /* Add border radius */
+}
+
+/* Define different background colors for genres */
+.genre:nth-child(odd),
+.genre:nth-child(even) {
+    background-color:  rgb(76, 76, 76);
+}
+

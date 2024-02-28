@@ -18,7 +18,7 @@ const getAllTrendingMovies = async () => {
     let allMovies = [];
     let movieIdsSet = new Set();
 
-    for (let page = 1; page <= 25; page++) {
+    for (let page = 1; page <= 10; page++) {
         const movies = await fetchTrendingMovies(page);
 
         // Filter movies that have original_title and not already added

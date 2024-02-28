@@ -23,3 +23,10 @@
     color: rgb(255, 0, 0);
     text-shadow: 1px 1px 2px rgb(0, 0, 0) ;
 }
+
+select {
+    font-size: xx-large;
+    border-radius: 12px;
+    background-color: rgb(194, 245, 143);
+    width: 30%;
+}
