@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { faPlay, faPlus, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPlus, faCircle,faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
