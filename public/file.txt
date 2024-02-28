@@ -1,1 +1,6 @@
 OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=85358ccd
+
+npm install react-router-dom
+npm install --save @fortawesome/react-fontawesome
+
+
