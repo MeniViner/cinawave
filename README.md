@@ -29,3 +29,4 @@ npm install react-scripts --save
 git config --global user.email "your-email@example.com"
 
 git config --global user.name "Your Name"
+# cinawave
