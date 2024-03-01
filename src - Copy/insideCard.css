@@ -1,0 +1,130 @@
+.insideCard {
+    position: relative;
+}
+
+.Movie-not-found {
+    color: white;
+    font-size: xx-large;
+}
+
+.top-inside {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+}
+
+.inside-info {
+    margin-top: 15%;
+    margin-left: 7%;
+    margin-right: 50%;
+    color: white;
+}
+
+.inside-info > div {
+    margin-bottom: 10px;
+}
+
+.bottom {
+    height: 100px;
+}
+
+.name-inside {
+    font-family: 'Arial', sans-serif;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.movie-inside-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 1%;
+}
+
+.text-description {
+    width: 60%;
+    font-size: 1.2em;
+}
+
+.movie-inside-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.mib-play-btn {
+    width: 350px; 
+    height: 55px; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 8px; 
+    border: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 6%;
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+  }
+
+.mib-play-btn:hover {
+    transform: scale(1.015);
+    transition: transform 0.3s ease;
+}
+
+.add-favorite-btn {
+    width: 55px;
+    height: 55px;
+    color: white;
+    background-color: rgb(48, 48, 48);
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-favorite-btn:hover {
+    background-color: rgb(130, 130, 130);
+    transition: background-color 0.6s ease;
+}
+
+.mib-play-btn txt,
+.add-favorite-btn .like {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.mib-play-btn plBt {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.like {
+    font-size: 25px;
+}
+.circle-inside {
+    font-size: 3.5px;
+    align-items: center;
+    color: #acacac;
+}
+
+.movie-inside-genre {
+    display: flex; 
+    border-radius: 25px;
+    padding: 5px; 
+}
+
+.genre {
+    margin-right: 5px;
+    padding: 5px; /* Add padding */
+    border-radius: 5px; /* Add border radius */
+}
+
+/* Define different background colors for genres */
+.genre:nth-child(odd),
+.genre:nth-child(even) {
+    background-color:  rgb(76, 76, 76);
+}
+

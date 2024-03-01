@@ -1,0 +1,21 @@
+/* body, html {
+    margin: 1px;
+    padding: 1px;
+} */
+
+body {
+    background-color: black;
+}
+
+.main-cards {
+    /* border: rgb(51, 156, 217) solid 5px; */
+    display: flex;
+    flex-wrap: wrap;    
+    /* justify-content:last baseline; Equal space on both sides  */
+    margin: 1px;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    gap: 0.5% ;
+   
+}
