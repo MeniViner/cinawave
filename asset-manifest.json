@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cinawave/static/css/main.eaf183aa.css",
+    "main.js": "/cinawave/static/js/main.b759f377.js",
+    "index.html": "/cinawave/index.html",
+    "main.eaf183aa.css.map": "/cinawave/static/css/main.eaf183aa.css.map",
+    "main.b759f377.js.map": "/cinawave/static/js/main.b759f377.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eaf183aa.css",
+    "static/js/main.b759f377.js"
+  ]
+}
