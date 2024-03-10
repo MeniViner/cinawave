@@ -43,7 +43,7 @@ function Top({ onSearch }) {
     const location = useLocation();
 
     const backgroundImageStyle = {
-        backgroundImage: `url("./images/300.jpeg")`,
+        // backgroundImage: `url("./images/300.jpeg")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     };
@@ -72,7 +72,7 @@ function Top({ onSearch }) {
         <div className="main-main" style={backgroundImageStyle}>
             <div className="overlay"></div>
             <div className="up">
-                <br />
+                <br/>
                 <Titel
                     onSearch={onSearch}
                     searchQuery={searchQuery}

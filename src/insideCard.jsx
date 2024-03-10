@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { faPlay, faPlus, faCircle,faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPlus, faCircle, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -88,55 +88,42 @@ function InsideCard({ filteredMovies }) {
   return (
     <div className="insideCard">
       <div style={backgroundImageStyle}></div>
-          <div className="top-inside">
-            
-            <div className="inside-info">
-                <div className="name-inside">{selectedMovie.title}</div>
- 
-                <div className="movie-inside-description">
-                  
-                  <div className="mis-year">{year}</div>
-                  <div className="circle-inside"><FontAwesomeIcon icon={faCircle}/></div>
-                  <div className="mis-length">{formattedLength}</div>
-                  <div className="circle-inside"><FontAwesomeIcon icon={faCircle}/></div>
-                  <div className="mis-Language">{languageCode}</div>
-
-                </div>  
-
-                <div className="movie-inside-genre">
-                  {formattedGenres.map((genre, index) => (
-                    <div key={index} className="genre">{genre}</div>
-                  ))}
-                </div>
-
-                <div className="text-description">{selectedMovie.omdbDetails.Plot}</div>
-
-                <div className="movie-inside-buttons">
-
-                  <div>
-                    <button className="mib-play-btn">
-                      <plBt><FontAwesomeIcon icon={faPlay}/></plBt>
-                      <txt>Watch now</txt>
-                    </button>
-                  </div>
-            
-                  <div>
-                    <button className="add-favorite-btn" onClick={toggleLike}> 
-                      <div className="like" >
-                        <FontAwesomeIcon icon={liked ? faCheck : faPlus}/>
-                      </div>
-                    </button>
-                  </div> 
-                </div>
-                
-              
-
+        <div className="top-inside">
+          <div className="inside-info">
+            <div className="name-inside">{selectedMovie.title}</div>
+            <div className="movie-inside-description">
+              <div className="mis-year">{year}</div>
+              <div className="circle-inside"><FontAwesomeIcon icon={faCircle}/></div>
+              <div className="mis-length">{formattedLength}</div>
+              <div className="circle-inside"><FontAwesomeIcon icon={faCircle}/></div>
+              <div className="mis-Language">{languageCode}</div>
+            </div> 
+            <div className="movie-inside-genre">
+              {formattedGenres.map((genre, index) => (
+                <div key={index} className="genre">{genre}</div>
+              ))}
             </div>
-          </div>
-      
-      
+            <div className="text-description">{selectedMovie.omdbDetails.Plot}</div>
+            <div className="movie-inside-buttons">
+              <div>
+                <button className="mib-play-btn">
+                  <plBt><FontAwesomeIcon icon={faPlay}/></plBt>
+                  <txt>Watch now</txt>
+                </button>
+              </div>
+              <div>
+                <button className="add-favorite-btn" onClick={toggleLike}> 
+                  <div className="like" >
+                    <FontAwesomeIcon icon={liked ? faCheck : faPlus}/>
+                  </div>
+                </button>
+              </div> 
+            </div>
+        </div>
+      </div>
     </div>
   );
 }
+
 
 export default InsideCard;
