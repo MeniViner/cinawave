@@ -12,7 +12,7 @@ function Titel({ searchQuery, setSearchQuery, handleKeyDown }) {
     <div className="titel">
       <img className="logo" src="/images/logo.png" alt="logo" />
       <div className="search-box">
-        <FontAwesomeIcon icon={faSearch} size="x1" id="search-icon" />
+        <FontAwesomeIcon icon={faSearch} size="lg" id="search-icon" />
         <input
           className="search-bar"
           type="text"

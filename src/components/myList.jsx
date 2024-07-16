@@ -30,7 +30,7 @@ function MyList({ filteredMovies }) {
           key={index}
           to={`/card/${encodeURIComponent(movie.original_title)}`}
         >
-          <Card movie={movie} />
+          <Card movie={movie} isInMyList={true}/>
         </Link>
       ))}
     </div>
