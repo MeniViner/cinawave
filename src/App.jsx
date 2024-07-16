@@ -247,6 +247,7 @@ import Top from "./components/top";
 import "./style/App.css";
 import NotFoundPage from "./components/NotFound";
 import SeriesCard from "./components/SeriesCard";
+import Series from "./components/series";  // Ensure this import is correct
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -320,10 +321,6 @@ function App() {
       </div>
     </Router>
   );
-}
-
-function Series() {
-  return <h2>This is the Series page</h2>;
 }
 
 function Home({ filteredMovies, loadMoreMovies, isLoading }) {
